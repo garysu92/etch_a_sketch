@@ -1,10 +1,11 @@
 .container {
-  border: 3px solid darkblue;
+  border: 10px solid gray;
   border-radius: 3px;
   width: 700px;
   height: 700px;
   display: grid;
   box-shadow: 0px 0px 3px darkblue;
+  background-color: white;
 }
 
 .hov {
@@ -39,7 +40,7 @@ form {
 button {
   width: 25px;
   height: 25px;
-  border: 0px solid white;
+  border: 2px solid white;
   border-radius: 3px;
   box-shadow: 0px 0px 2px black;
   margin: 10px;
