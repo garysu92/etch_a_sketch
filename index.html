@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript" src="script.js" defer></script>
+    <title>Etch-a-Sketch</title>
+</head>
+
+<body>
+    <form id="form">
+        Choose dimensions (1x1 ~ 100x100)
+        <input type="text" id="numOf">
+        <input type="button" id="submit" onclick="getInput()" value="Select">
+    </form>
+    <p>
+        <button class="btn" id="red" onclick="updateColor(this.id)"></button>
+        <button class="btn" id="blue" onclick="updateColor(this.id)"></button>
+        <button class="btn" id="yellow" onclick="updateColor(this.id)"></button>
+        <button class="btn" id="black" onclick="updateColor(this.id)"></button>
+        <button class="btn" id="white" onclick="updateColor(this.id)"></button>
+        <button class="btn" style="width: 100px" onclick="reset()">Reset</button>
+    </p>
+    <div class="container" id="grid">
+    </div>
+</body>
+
+</html>
