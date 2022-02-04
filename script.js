@@ -1,4 +1,6 @@
 let currColor = "black";
+let trigger = false;
+
 function createDivs(val) {
   if (val < 1 || val > 100) return;
   const numDivs = val * val;
@@ -9,7 +11,7 @@ function createDivs(val) {
   for (let i = 0; i < numDivs; i++) {
     arrDivs[i] = document.createElement("div");
     arrDivs[i].setAttribute("class", "div");
-    arrDivs[i].addEventListener("mouseover", changeColour);
+    arrDivs[i].addEventListener("mousemove", changeColour);
     c.appendChild(arrDivs[i]);
   }
 }
@@ -27,7 +29,9 @@ function getInput(e) {
 }
 
 function changeColour(e) {
-  e.target.style.backgroundColor = currColor;
+  if (trigger == true) {
+    e.target.style.backgroundColor = currColor;
+  }
 }
 
 function updateColor(col) {
@@ -46,3 +50,11 @@ function reset() {
     element.style.backgroundColor = "white";
   });
 }
+
+document.addEventListener("mousedown", function () {
+  trigger = true;
+});
+
+document.addEventListener("mouseup", function () {
+  trigger = false;
+});
