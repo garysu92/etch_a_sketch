@@ -84,3 +84,9 @@ form {
 .selected {
   box-shadow: 0px 0px 5px black;
 }
+
+.div {
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
